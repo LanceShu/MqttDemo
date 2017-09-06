@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/flb"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@mipmap/right"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="18dp"
+        android:layout_marginEnd="18dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="登录信息"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:gravity="center_vertical"
+            android:background="@color/blue"
+            android:paddingStart="18dp"/>
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_marginLeft="16dp"-->
+            <!--android:layout_marginRight="16dp"-->
+            <!--android:layout_marginTop="6dp"-->
+            <!--android:layout_marginBottom="6dp">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="2"-->
+                <!--android:text="服务器地址："-->
+                <!--android:textStyle="bold"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:textColor="@color/blue"-->
+                <!--android:textSize="14sp"/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/hosturl"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="4"-->
+                <!--android:lines="1"-->
+                <!--android:gravity="center"-->
+                <!--android:textSize="14sp" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/serverconnect"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="36dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:layout_marginLeft="4dp"-->
+                <!--android:text="切换服务器"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:textColor="#fff"-->
+                <!--android:background="@drawable/yellow_button"/>-->
+
+        <!--</LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="PupTopic："
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:id="@+id/textView2" />
+
+            <EditText
+                android:id="@+id/topic"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:lines="1"
+                android:gravity="center"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/pupadd"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="2"
+                android:layout_marginLeft="4dp"
+                android:text="您的ID"
+                android:layout_gravity="center"
+                android:textColor="#fff"
+                android:background="@drawable/blue_button"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="SubTopic："
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:id="@+id/textView" />
+
+            <EditText
+                android:id="@+id/subtopic"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:lines="1"
+                android:gravity="center"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/addsub"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="2"
+                android:layout_marginLeft="4dp"
+                android:text="订阅ID"
+                android:textColor="#fff"
+                android:background="@drawable/green_button"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="发送ID"
+                    android:textColor="@color/red"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/puplist"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="6dp">
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="订阅ID"
+                    android:textColor="@color/yellow"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/userlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="6dp">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
